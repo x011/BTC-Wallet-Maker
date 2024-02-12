@@ -46,6 +46,19 @@ def resolve_wallet_path(wallet_path):
 
 # Function to generate and save QR code for an address
 def gen_qrcode(wallet_type, address, filename, logo_path='btc-logo.png', font_path='Roboto-Medium.ttf', box_size=10):
+        # Determine if we are running in a bundle or a script
+    if getattr(sys, 'frozen', False):
+        # If the application is run as a bundle, the pyInstaller bootloader
+        # extends the sys module by a flag frozen=True and sets the app 
+        # path into variable _MEIPASS'.
+        application_path = sys._MEIPASS
+    else:
+        application_path = os.path.dirname(os.path.abspath(__file__))
+
+    # Construct paths to the logo and font
+    logo_path = os.path.join(application_path, logo_path)
+    font_path = os.path.join(application_path, font_path)
+    
     # Generate QR code
     qr = qrcode.QRCode(
         version=None,
