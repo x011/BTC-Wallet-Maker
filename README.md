@@ -18,7 +18,7 @@ pip install -r requirements.txt
 
 For added convenience, precompiled binaries for Windows, Linux and macOS are available for [download](https://github.com/x011/BTC-Wallet-Maker/releases/).
 
-!Attention macOS users: Binary files may experience slow loading times as macOS performs cloud-based verification. For quicker execution, consider running the Python script instead.
+macOS users: Binary files may experience slow loading times as macOS performs cloud-based verification. For quicker execution, consider running the Python script instead.
 
 ## BTC Wallet Example:
 
