@@ -1,0 +1,4 @@
+mnemonic
+embit
+base58
+qrcode
