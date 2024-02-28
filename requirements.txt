@@ -1,0 +1,6 @@
+base58>=2.1.1
+cryptography>=42.0.2
+embit>=0.7.0
+mnemonic>=0.20
+Pillow>=9.0.1
+qrcode>=7.4.2
